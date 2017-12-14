@@ -37,7 +37,7 @@ public class NeuralNetwork
 				for (int k = 0; k < netLayers[i-1]; k++) // Run through all the neurons in the (i-1)th layer
 				{
 					// Give random values to the weights
-					weights[i][j][k] = (double)UnityEngine.Random.Range(-1f, 1f);
+					weights[i][j][k] = (double)UnityEngine.Random.Range(0f, 1f);
 				}
 			}
 		}
@@ -73,6 +73,28 @@ public class NeuralNetwork
 	private double activate(double value)
 	{
 		// TODO: Consider using ReLU
-		return System.Math.Tanh(value);
+		//return System.Math.Tanh(value); tanh
+		return (2f / (1f + System.Math.Exp(-2f * value)) - 1f); // sigmoid
+	}
+
+	public void mutate()
+	{
+		for (int i = 1; i < netLayers.Length; i++) // Run through all layers (except the input/first one)
+		{
+			for (int j = 0; j < netLayers[i]; j++) // Run through all the neurons in the ith layer
+			{
+				for (int k = 0; k < netLayers[i-1]; k++) // Run through all the neurons in the (i-1)th layer
+				{
+					double weightValue = weights[i][j][k];
+					double rand = UnityEngine.Random.Range(0, 1000);
+
+					if(rand <= 5) weightValue *= -1; // 0.05% chance of flipping the sign
+					else if(rand <= 8) weightValue += (double)UnityEngine.Random.Range(-1f, 1f); // 0.03% chance to add a random value to the weight
+					else if(rand <= 10) weightValue = (double)UnityEngine.Random.Range(-1f, 1f); // 0.02% chance to change the weight to a random value
+
+					weights[i][j][k] = weightValue;
+				}
+			}
+		}
 	}
 }

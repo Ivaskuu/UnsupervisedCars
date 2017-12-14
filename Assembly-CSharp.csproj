@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\My Assets\scripts\CubeMovement.cs" />
+     <Compile Include="Assets\My Assets\scripts\GuessNumber.cs" />
      <Compile Include="Assets\My Assets\scripts\Main.cs" />
      <Compile Include="Assets\My Assets\scripts\NeuralNetwork.cs" />
  <Reference Include="UnityEngine.UI">
