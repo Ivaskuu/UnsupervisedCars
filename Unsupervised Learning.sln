@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unsupervised Learning", "Assembly-CSharp.csproj", "{D8ABFD35-38BD-2EED-6B29-6BB04C59B0CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8ABFD35-38BD-2EED-6B29-6BB04C59B0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8ABFD35-38BD-2EED-6B29-6BB04C59B0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8ABFD35-38BD-2EED-6B29-6BB04C59B0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8ABFD35-38BD-2EED-6B29-6BB04C59B0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
